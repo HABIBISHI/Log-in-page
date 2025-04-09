@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Inventory</title>
+</head>
+<body>
+  <div class="logout">
+        <button >Logout</button>
+  </div>
+ <div class="dashboard">
+  <div><h1>Shepherd Animal Clinic</h1>
+    <h2>Your Role: Admin</h2>
+    </div>
+  <div class="tabs">
+      <div class="tab active" onclick="openTab('inventory')">Inventory</div>
+      <div class="tab" onclick="openTab('audit')">Audit History</div>
+  </div>
+<div id="inventory" class="tab-content active">
+    <table>
+      <thead>
+        <h3>Inventory</h3>
+      </thead>
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Brand</th>
+                <th>Current Stock</th>
+                <th>Update Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASDJASKDSA</td>
+                <td>asdsd</td>
+                <td>5</td>
+                <td class="stock">
+                <input type="number"></td> 
+                <td>
+                <button>Update</button>
+                <button class="delete"> Delete </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
+<div id="audit" class="tab-content">
+  <table>
+    <thead>
+        <h3>Audit History</h3>
+      </thead>
+      <thead>
+          <tr>
+              <th>Item Name</th>
+              <th>Old Stock</th>
+              <th>New Stock</th>
+              <th>Action By</th>
+              <th>Action Date</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+        <tr>
+            <td>ADSADSDSADSASDAD</td>
+            <td>200</td>
+            <td>100</td>
+            <td>admin</td>
+            <td>12/3/2024, 7:25:43 PM</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+<script>
+  function openTab(tabName) {
+      const tabContents = document.getElementsByClassName('tab-content');
+      for (let i = 0; i < tabContents.length; i++) {
+          tabContents[i].classList.remove('active');
+      }
+      const tabs = document.getElementsByClassName('tab');
+      for (let i = 0; i < tabs.length; i++) {
+          tabs[i].classList.remove('active');
+      }
+      document.getElementById(tabName).classList.add('active');
+      event.currentTarget.classList.add('active');
+  }
+</script>
+</body>
+</html>
