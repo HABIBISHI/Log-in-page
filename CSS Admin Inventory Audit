@@ -1,0 +1,131 @@
+.logout {
+  text-align: right;
+}
+
+.logout button {
+  background-color: red;
+  height: 40px;
+  width: 80px;
+}
+
+.logout button:hover {
+  background-color: rgb(106, 18, 18); 
+}
+
+.dashboard {
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #f2f2f2;
+  margin-right: 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+.tab.active {
+  background: #3498db;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  color: #333;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+h2 {
+  color: #7f8c8d;
+  margin-top: 0;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+h3 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+  font-weight: bolder;
+  text-align: center;
+  
+}
+
+h4 {
+  color: #2c3e50;
+  margin-top: 0;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 2000px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+
+}
+
+input {
+  width: 40px;
+  height: 25px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+button {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 60px;
+  height: 30px;
+  margin: 10px;
+}
+
+button:hover{
+  background-color: rgb(5, 66, 5);
+  cursor: pointer;
+}
+
+.delete {
+  background-color: red;
+  margin: 0;
+}
+
+.delete:hover {
+  background-color: rgb(106, 18, 18);
+}
+
