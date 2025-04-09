@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Shepherd Animal Clinic</title>
+</head>
+<body>
+    <header>
+        <h1>SHEPHERD ANIMAL CLINIC</h1>
+        <p>Taking care of your furry friends</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#petcaretips">Pet Care Tips</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="home">
+            <h2>Welcome to Shepherd Animal Clinic</h2>
+            <p>we are dedicated to providing exceptional veterinary care with a gentle touch. Whether your pet needs a routine checkup, vaccinations, surgery, or emergency treatment, our experienced and compassionate team is here to keep them healthy and happy. We treat every animal like our own, offering personalized care in a warm, welcoming environment. Trust Shepherd Animal Clinic for expert veterinary services—because your pet’s well-being is our top priority!</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service-card">
+                    <img src="https://scontent.fmnl3-2.fna.fbcdn.net/v/t39.30808-6/485874875_1107200294543751_3635327025572842311_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEEwTjTZSLwDmfc8j1K7h60KMCCcryz0soowIJyvLPSyi4mLufKGWISgfX6P_31gkISs8Yup0gcQAyPywIi_sT9&_nc_ohc=zqt1qYAh73wQ7kNvwHmc67W&_nc_oc=AdniLt893WRl1dqv-ANI6ak_E5AmeyYyZcGUlQElPHOTjSerWeh5CBCCD3equn_urvY&_nc_zt=23&_nc_ht=scontent.fmnl3-2.fna&_nc_gid=xBr9dmdhpK4F33SgOh8ZMw&oh=00_AfGBVyW5DkPrxDACiNqXpq1kRyCVz6zhdwuW0HOEZ6yYeQ&oe=67FA6798" alt="Dog Grooming">
+                    <h3>Grooming</h3>
+                    <p>Bath, brush, and nail trimming for your dog.</p>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+                
+                <div class="service-card">
+                    <img src="https://scontent.fmnl37-1.fna.fbcdn.net/v/t39.30808-6/486017866_1106400647957049_5157266362524058071_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH21xBGMBKjbxKSvFuu0PTONGl7ZypY1LM0aXtnKljUs_RGzrG4gGTNCDg6haOWZ-H8IAjSx8895OdNooZgqL_D&_nc_ohc=iVzQizR2SroQ7kNvwGr66aR&_nc_oc=Adn4AgmgGqletVSQknE4fGTPrxyQuu8VfzZ08ppMqv0_vSvYBhFrXKkmoVA3D1IjIIc&_nc_zt=23&_nc_ht=scontent.fmnl37-1.fna&_nc_gid=krKfiJiSXmPl9Le7h1-fzQ&oh=00_AfHwl-Tc7vwkFR4yDn9sxBLkbN0MlZW2bAGKBJtJWFGPcQ&oe=67FA5A56" alt="Consultation">
+                    <h3>Consultation</h3>
+                    <p>Consult your dog now</p>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+                
+                <div class="service-card">
+                    <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/485994398_1105738494689931_7994631817149556487_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEwnYMpeI9Z6zZ9t79A8uY0TWpe2MofXPZNal7Yyh9c9ieywqjbKDdeQ_9QlZdcBdVUT9MQobewBnAOfPLENGrc&_nc_ohc=Xdf4EnGSqvkQ7kNvwFQz5LS&_nc_oc=AdlqjzAw9JdEjda4yn-vHC65oia2BlKF1zGOQMsetKBnSwa5wDmxzUqR1pUtneWZbgE&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=jYTlHGxn375JbsR4y0DFlQ&oh=00_AfEHcc4uMMoD5ByyRaodk3_p7bH14gcu01WiAWIjHTwM0A&oe=67FA4B55" alt="Dog Walking">
+                    <h3>Surgery</h3>
+                    <p>Surgery</p>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/481773845_1094920469105067_8667297894900727903_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF9VLczRZbtLDmi_PCeCjE3HL2WM_A8rgkcvZYz8DyuCTLNXbNhVML08iKCCOWhqeBhO_yo-6LOfmUPf5nTkm0X&_nc_ohc=jPA6nLE1i48Q7kNvwGSJxrk&_nc_oc=AdlDy9BZBtcJMPnbQ6AfYpN2_flCtMq92L4tQMi_c9gZqSAo4UtdksK6-Ip7ZoDsv-A&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&_nc_gid=50AGkO-6a4IETfM1a3XALg&oh=00_AfH5ibJspt0gtkhhbxIHYkiV0f3isbGR7Aqgqnv1IM76oA&oe=67FA6922" alt="Laboratory">
+                    <h3>Laboratory</h3>
+                    <p>Surgery</p>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/484871921_1101583488438765_1968771801744424982_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHedIKKZP92C0jzvFCfh0DWloDWguS1-MWWgNaC5LX4xXtL2332y9vJJswYw7n21lvF5T3iq-T96ESqCSoIV1zw&_nc_ohc=7fwMZ7MZHGUQ7kNvwG5sX0D&_nc_oc=AdkMICsaCt4EJz45pA10ztxm4TjGTXG_v1jyg8efmz1YhHhF1RdIcLhYywqKjjnJRfY&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&_nc_gid=DR1NzDBRYM80t2OBw28krQ&oh=00_AfHVd3vsJ1VQt1EOJGhtCEl555mNFyP9ghBazo8dBOaEww&oe=67FA5D8E" alt="Vaccination">
+                    <h3>Vaccination</h3>
+                    <p>Surgery</p>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+
+            </div>
+        </section>
+        
+        <section id="petcaretips">
+            <h2>Pet Care Tips</h2>
+            <p>We are a small team of dog lovers dedicated to providing simple, affordable care for your pets.</p>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: contact@Shepherdanimalclinic.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+    </div>
+</body>
+</html>
