@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shepherd Animal Clinic - Professional veterinary care for your pets">
+    <meta name="keywords" content="veterinary, pet care, animal clinic, dog grooming, pet vaccination">
+    <link rel="stylesheet" href="style.css">
+    <script src="Myscript.js"></script>
+    <title>Shepherd Animal Clinic - Veterinary Services</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div>
+                <h1 class="logo">SHEPHERD ANIMAL CLINIC</h1>
+                <div class="tagline">Taking care of your furry friends</div>
+            </div>
+        </div>
+        <div class="auth-buttons">
+            <button class="auth-button" id="loginBtn" aria-expanded="false" aria-controls="loginDropdown">LOGIN</button>
+            <button class="auth-button" id="signupBtn" aria-expanded="false" aria-controls="signupDropdown">SIGN UP</button>
+            
+            <div class="auth-dropdown" id="loginDropdown" role="dialog" aria-modal="true" aria-hidden="true">
+                <button class="close-btn" id="closeLogin" aria-label="Close login form">×</button>
+                <form class="auth-form" id="loginForm">
+                    <h3 class="form-title">Member Login</h3>
+                    <div class="input-group">
+                        <label for="username">Username or Email</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">LOGIN</button>
+                    
+                    <div class="form-footer">
+                        <a href="/forgot-password">Forgot password?</a> | 
+                        <a href="#" id="switchToSignup">Create account</a>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="auth-dropdown" id="signupDropdown" role="dialog" aria-modal="true" aria-hidden="true">
+                <button class="close-btn" id="closeSignup" aria-label="Close signup form">×</button>
+                <form class="auth-form" id="signupForm">
+                    <h3 class="form-title">Create Account</h3>
+                    <div class="input-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="new-password">Password</label>
+                        <input type="password" id="new-password" name="new-password" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">SIGN UP</button>
+                    
+                    <div class="form-footer">
+                        Already have an account? <a href="#" id="switchToLogin">Login here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#dogcaretips">Dog Care Tips</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="home" aria-labelledby="home-heading">
+            <h2 id="home-heading">Welcome to Shepherd Animal Clinic</h2>
+            <p>We are dedicated to providing exceptional veterinary care with a gentle touch. Whether your pet needs a routine checkup, vaccinations, surgery, or emergency treatment, our experienced and compassionate team is here to keep them healthy and happy. We treat every animal like our own, offering personalized care in a warm, welcoming environment. Trust Shepherd Animal Clinic for expert veterinary services—because your pet's well-being is our top priority!</p>
+        </section>
+        <br>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="image/HappyDog.jpg" alt="Happy dog">
+                        <div class="slide-content">
+                            <h3>Happy Pets</h3>
+                            <p>We care for your pet's happiness</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="image/VeterinaryCare.jpg" alt="Veterinary care">
+                        <div class="slide-content">
+                            <h3>Expert Care</h3>
+                            <p>Professional veterinary services</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="image/DogGromming.jpg" alt="Dog grooming">
+                        <div class="slide-content">
+                            <h3>Grooming Services</h3>
+                            <p>Keep your pet looking their best</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="image/PetHealthCheck.jpg" alt="Pet health check">
+                        <div class="slide-content">
+                            <h3>Annual Checkups</h3>
+                            <p>Preventive care saves lives</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-arrow prev">❮</button>
+                <button class="slider-arrow next">❯</button>
+                <div class="slider-nav">
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                </div>
+            </div>
+        
+        <section id="services" aria-labelledby="services-heading">
+    <h2 id="services-heading">Our Services</h2>
+    <p>At our veterinary clinic, we provide comprehensive, compassionate care tailored to your pet's unique needs. Our expert team offers advanced diagnostics, routine vaccinations, and specialized treatments to ensure your companion's health and well-being. From preventive annual checkups that catch early signs of illness to emergency care when every second counts, we prioritize safety, comfort, and cutting-edge medicine. Additional services include dental care, surgical procedures, nutritional counseling, and grooming, all designed to keep your pet thriving at every life stage. Trust us to deliver exceptional care—because your pet deserves nothing less."</p>
+    <br>
+    <div class="services">
+        <article class="service-card">
+            <img src="image/Grooming.jpg" alt="Dog being groomed by a professional">
+            <h3>Grooming</h3>
+            <p>Bath, brush, and nail trimming for your dog.</p>
+            <a href="#" class="btn" aria-label="Book grooming service">Book Now</a>
+        </article>
+        
+        <article class="service-card">
+            <img src="image/Consultation.jpg" alt="Veterinarian examining a dog">
+            <h3>Consultation</h3>
+            <p>Consult your dog now</p>
+            <a href="#" class="btn" aria-label="Book consultation service">Book Now</a>
+        </article>
+        
+        <article class="service-card">
+            <img src="image/Surgery.jpg" alt="Veterinary surgery room">
+            <h3>Surgery</h3>
+            <p>Advanced surgical care for your pet.</p>
+            <a href="#" class="btn" aria-label="Book surgery service">Book Now</a>
+        </article>
+
+        <article class="service-card">
+            <img src="image/Laboratory.jpg" alt="Veterinary laboratory equipment">
+            <h3>Laboratory</h3>
+            <p>Accurate and fast diagnostics.</p>
+            <a href="#" class="btn" aria-label="Book laboratory service">Book Now</a>
+        </article>
+
+        <article class="service-card">
+            <img src="image/Vaccination.jpg" alt="Dog receiving vaccination">
+            <h3>Vaccination</h3>
+            <p>Protect your pet from diseases.</p>
+            <a href="#" class="btn" aria-label="Book vaccination service">Book Now</a>
+        </article>           
+    </section>
+  
+        <section id="dogcaretips" aria-labelledby="tips-heading">
+            <h2 id="tips-heading">Dog Care Tips</h2>
+            <p>Taking care of your dog involves a mix of proper nutrition, regular health check-ups, grooming, exercise, and lots of love. Feed them high-quality food suited to their age and size, avoid toxic foods, and ensure they always have fresh water. Keep up with vet visits, vaccinations, and dental care to maintain their health. Regular brushing, bathing, and nail trimming will keep them clean and comfortable. Daily walks, playtime, and mental stimulation prevent boredom and keep them active. Create a safe home environment, free from hazards, and provide a cozy resting spot. Most importantly, shower them with affection, patience, and positive reinforcement to build a strong, happy bond. A well-cared-for dog is a joyful and loyal companion for life!</p>
+        </section>
+        <br>
+        <div class="dog-gallery">
+        <div class="dog-card">
+            <img src="image/Chihuahua.jpg" alt="Chihuahua" class="dog-image">
+            <div class="dog-info">
+                <h2 class="dog-name">Chihuahua</h2>
+                <a href="#" class="view-btn view-chihuahua">View >>></a>
+                <div class="other-breeds">
+                </div>
+            </div>
+        </div>
+
+        <div class="dog-card">
+            <img src="image/Pomeranian.jpg" alt="Pomeranian" class="dog-image">
+            <div class="dog-info">
+                <h2 class="dog-name">Pomeranian</h2>
+                <a href="#" class="view-btn view-pomeranian">View >>></a>
+            </div>
+        </div>
+
+    <div class="dog-card">
+            <img src="image/GermanShepherd.jpg" alt="GermanShepherd" class="dog-image">
+            <div class="dog-info">
+                <h2 class="dog-name">German Shepherd</h2>
+                <a href="#" class="view-btn view-GermanShepherd">View >>></a>
+            </div>
+        </div>
+
+        <div class="dog-card">
+            <img src="image/Bulldog.jpg" alt="Bulldog" class="dog-image">
+            <div class="dog-info">
+                <h2 class="dog-name">Bulldog</h2>
+                <a href="#" class="view-btn view-Bulldog">View >>></a>
+            </div>
+        </div>
+
+        <div class="dog-card">
+            <img src="image/Aspin.jpg" alt="Aspin" class="dog-image">
+            <div class="dog-info">
+                <h2 class="dog-name">Aspin</h2>
+                <a href="#" class="view-btn view-Aspin">View >>></a>
+            </div>
+        </div>
+
+        <div class="dog-card">
+            <img src="image/Poodle.jpg" alt="Poodle" class="dog-image">
+            <div class="dog-info">
+                <h2 class="dog-name">Poodle</h2>
+                <a href="#" class="view-btn view-Poodle">View >>></a>
+            </div>
+        </div>
+    </div>
+
+ <div id="dogModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+<img id="modalImage" src="" alt="Dog" style="width:100%; max-height:300px; object-fit:cover; border-radius:8px; margin-bottom:15px;">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+    </div>
+</div>
+        
+<section id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact Us</h2>
+    <article class="service-card">
+        <img src="image/logo.jpg" alt="Veterinarian examining a dog">
+  
+        <div class="branch-hours">
+            <div class="branch">
+                <h4>Tungko Branch</h4>
+                <p>You may visit us at Door 1 Florinda Building Pecsonville Quirino Highway Tungko SJDM (infront of SM San Jose Del Monte) </p>
+                      <h3>Clinic Hours</h3>
+                <p>Monday-Sunday: 8am - 5pm</p>
+                <p>Phone: 09088628251</p>
+            </div>
+            
+            <div class="branch">
+                <h4>Muzon Branch</h4>
+                <p>You may visit us at Blk 1 Lot 6 Provincial Road Sitio Libis II, Muzon San Jose Del Monte Bulacan (beside LCC College)</p>
+                <h3>Clinic Hours</h3>
+                <p>Monday-Saturday: 8am - 4pm</p>
+                <p>Phone : 09093700840</p>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <p>Email : shepherdanimalclinictungko@gmail.com</p>
+            <p>Facebook : /shepherdanimalclinicmain</p>
+
+        </div>
+    </article>
+</section>
+        </div>
+    </main>
+</body>
+</html>
