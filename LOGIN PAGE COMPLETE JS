@@ -1,0 +1,347 @@
+document.addEventListener('DOMContentLoaded', function() {
+    //  Auth Dropdown Functionality 
+  const setupAuthDropdowns = () => {
+        const loginBtn = document.getElementById('loginBtn');
+        const signupBtn = document.getElementById('signupBtn');
+        const loginDropdown = document.getElementById('loginDropdown');
+        const signupDropdown = document.getElementById('signupDropdown');
+        const closeLogin = document.getElementById('closeLogin');
+        const closeSignup = document.getElementById('closeSignup');
+        const switchToSignup = document.getElementById('switchToSignup');
+        const switchToLogin = document.getElementById('switchToLogin');
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+
+        if (!loginBtn || !signupBtn || !loginDropdown || !signupDropdown) return;
+
+        const toggleDropdown = (dropdown, button, otherDropdown = null) => {
+            if (!dropdown || !button) return;
+            
+            const isExpanded = dropdown.getAttribute('aria-hidden') === 'false';
+            dropdown.setAttribute('aria-hidden', isExpanded);
+            button.setAttribute('aria-expanded', !isExpanded);
+            
+            if (isExpanded) {
+                dropdown.classList.remove('show');
+            } else {
+                dropdown.classList.add('show');
+                if (otherDropdown) {
+                    otherDropdown.classList.remove('show');
+                    otherDropdown.setAttribute('aria-hidden', 'true');
+                    const otherButton = otherDropdown === loginDropdown ? loginBtn : signupBtn;
+                    if (otherButton) otherButton.setAttribute('aria-expanded', 'false');
+                }
+            }
+        };
+
+        //  Event listeners
+        loginBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDropdown(loginDropdown, loginBtn, signupDropdown);
+        });
+
+        signupBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDropdown(signupDropdown, signupBtn, loginDropdown);
+        });
+
+        if (closeLogin) closeLogin.addEventListener('click', () => toggleDropdown(loginDropdown, loginBtn));
+        if (closeSignup) closeSignup.addEventListener('click', () => toggleDropdown(signupDropdown, signupBtn));
+
+        if (switchToSignup) {
+            switchToSignup.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleDropdown(loginDropdown, loginBtn);
+                toggleDropdown(signupDropdown, signupBtn);
+            });
+        }
+
+        if (switchToLogin) {
+            switchToLogin.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleDropdown(signupDropdown, signupBtn);
+                toggleDropdown(loginDropdown, loginBtn);
+            });
+        }
+
+        window.addEventListener('click', () => {
+            if (loginDropdown.classList.contains('show')) toggleDropdown(loginDropdown, loginBtn);
+            if (signupDropdown.classList.contains('show')) toggleDropdown(signupDropdown, signupBtn);
+        });
+
+        loginDropdown?.addEventListener('click', (e) => e.stopPropagation());
+        signupDropdown?.addEventListener('click', (e) => e.stopPropagation());
+
+        loginForm?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Login functionality would be implemented here');
+        });
+
+        signupForm?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Signup functionality would be implemented here');
+        });
+    };
+
+    //  Slider Functionality 
+   const setupSlider = () => {
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const sliderContainer = document.querySelector('.slider-container');
+
+        if (!slider || slides.length === 0 || !dots.length || !prevBtn || !nextBtn) return;
+
+        let currentSlide = 0;
+        const slideCount = slides.length;
+        let slideInterval;
+
+        const goToSlide = (slideIndex) => {
+            currentSlide = slideIndex;
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => dot.classList.toggle('active', index === currentSlide));
+        };
+
+        const nextSlide = () => goToSlide((currentSlide + 1) % slideCount);
+        const prevSlide = () => goToSlide((currentSlide - 1 + slideCount) % slideCount);
+
+        const startAutoSlide = () => {
+            stopAutoSlide();
+            slideInterval = setInterval(nextSlide, 5000);
+        };
+
+        const stopAutoSlide = () => {
+            if (slideInterval) clearInterval(slideInterval);
+        };
+
+        // Initialize
+        goToSlide(0);
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        dots.forEach((dot, index) => dot.addEventListener('click', () => goToSlide(index)));
+        startAutoSlide();
+
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+            sliderContainer.addEventListener('mouseleave', startAutoSlide);
+        }
+    };
+
+
+    //  Modal Functionality 
+    const setupModals = () => {
+        const modal = document.getElementById('dogModal');
+        const closeBtn = modal ? modal.querySelector('.close-btn') : null;
+
+        if (!modal || !closeBtn) {
+            console.error('Modal or close button not found');
+            return;
+        }
+
+        // Services data with booking availability
+        const servicesData = {
+            grooming: {
+                title: "Professional Grooming",
+                image: "image/Grooming.jpg",
+                description: "Our full grooming service includes bath, haircut, nail trimming, and ear cleaning.",
+                price: "1",
+                bookable: true,
+            },
+            consultation: {
+                title: "Veterinary Consultation",
+                image: "image/Consultation.jpg",
+                description: "Comprehensive health assessments with our experienced veterinarians.",
+                price: "2",
+                bookable: true
+            },
+            surgery: {
+                title: "Surgical Services",
+                image: "image/Surgery.jpg",
+                description: "Our surgical suite is equipped for a range of procedures.",
+                price: "3",
+                bookable: false,
+                contactForBooking: true
+            },
+            laboratory: {
+                title: "Diagnostic Laboratory",
+                image: "image/Laboratory.jpg",
+                description: "On-site laboratory services for fast, accurate results.",
+                price: "4",
+                bookable: false,
+                contactForBooking: true
+            },
+            vaccination: {
+                title: "Vaccination Services",
+                image: "image/Vaccination.jpg",
+                description: "Essential vaccinations including rabies, distemper, parvovirus.",
+                price: "5",
+                bookable: false,
+                contactForBooking: true
+            }
+        };
+
+        // Dog care tips data
+        const tipsData = {
+            chihuahua: {
+                title: "Chihuahua Care Tips",
+                image: "image/Chihuahua.jpg",
+                description: "Chihuahuas may be small, but they need big care! Keep them warm in cool weather, protect their fragile bones, and brush their teeth regularly to prevent dental issues. Provide short daily walks and mental stimulation to keep them active without overexertion. Feed high-quality small-breed food in proper portions to maintain a healthy weight. Early socialization helps curb their feisty temperament. Regular vet check-ups are essential to monitor for common health problems like hypoglycemia and heart conditions. With proper care, your tiny companion will thrive!"
+            },
+            pomeranian: {
+                title: "Pomeranian Care Tips",
+                image: "image/Pomeranian.jpg",
+                description: "Poms need daily brushing for their fluffy coat and monthly grooming. Protect their tiny joints - no high jumps! Walk them daily but avoid overexertion. Brush teeth 3-4x weekly to prevent dental disease. Use a harness (not collar) to protect their delicate trachea. Feed small-breed formula to maintain energy. Socialize early to curb excessive barking. Watch for luxating patellas and schedule regular vet checks. Their big personality needs patient training and lots of love!"
+            },
+            "german shepherd": {
+                title: "German Shepherd Care Tips",
+                image: "image/GermanShepherd.jpg",
+                description: "Active and intelligent, German Shepherds need daily exercise (1-2 hours) and mental challenges to stay happy. Their double coat requires weekly brushing (daily during shedding season). Avoid overexertion in puppies to protect developing joints and hips - ask your vet about hip dysplasia prevention. Train early with positive reinforcement to channel their protective instincts properly. Feed large-breed formula to support their size and energy. Watch for common issues like bloat (feed smaller meals) and degenerative myelopathy. Regular vet checks and proper socialization are key to raising a well-adjusted companion."
+            },
+            bulldog: {
+                title: "Bulldog Care Tips",
+                image: "image/Bulldog.jpg",
+                description: "Bulldogs are lovable but need special care. Their short snouts make them prone to breathing problems – avoid overheating and strenuous exercise. Clean their face wrinkles daily to prevent infections. Their sensitive skin may need special shampoos. Keep them in air-conditioned spaces during hot weather. Feed weight-management food to avoid obesity, a common issue. Use a harness instead of a collar to protect their neck. Watch for hip dysplasia and eye problems. Regular vet visits are essential for this adorable but high-maintenance breed."
+            },
+            aspin: {
+                title: "Aspin Care Tips",
+                image: "image/Aspin.jpg",
+                description: "ASPINs are tough, smart, and low-maintenance Philippine dogs. Their short coats need just weekly brushing. They thrive on moderate exercise (30-60 mins daily) and mental challenges. Feed quality local-brand food with proper portions to avoid obesity. Vaccinate regularly against common tropical diseases like parvo and distemper. Train with positive reinforcement – they're eager learners! Watch for skin allergies (common in humid climates) and tick-borne illnesses. Most ASPINs are naturally hardy, but annual vet checks keep them in top shape. Their loyalty and adaptability make them perfect Filipino companions!"
+            },
+            poodle: {
+                title: "Poodle Care Tips",
+                image: "image/Poodle.jpg",
+                description: "Poodles (Toy, Miniature & Standard) need regular grooming every 4-6 weeks to maintain their curly, hypoallergenic coat. Brush daily to prevent mats. Their high intelligence requires mental stimulation (puzzle toys, training) to avoid boredom. Provide daily exercise (walks, playtime) adjusted to their size. Poodles are prone to ear infections, so clean ears weekly. Use dog-safe shampoo to protect their sensitive skin. Feed high-quality food matching their size/age. Watch for joint issues (especially in Toys/Minis) and eye problems. Regular vet visits help maintain their elegant looks and lively personality!"
+            }
+        };
+        
+        // Function to show modal with content
+        const showModal = (content, isService = false) => {
+            const modalContent = modal.querySelector('.modal-content');
+            const modalImage = modal.querySelector('#modalImage');
+            const modalTitle = modal.querySelector('#modalTitle');
+            const modalDescription = modal.querySelector('#modalDescription');
+            
+            // Clear any existing footer and details
+            const existingFooter = modal.querySelector('.modal-footer');
+            if (existingFooter) modalContent.removeChild(existingFooter);
+            
+            const existingDetails = modal.querySelector('.service-details');
+            if (existingDetails) modalDescription.parentNode.removeChild(existingDetails);
+
+            if (modalImage && modalTitle && modalDescription) {
+                modalImage.src = content.image;
+                modalImage.alt = content.title;
+                modalTitle.textContent = content.title;
+                modalDescription.textContent = content.description;
+                
+                // Only show service details and booking for services
+                if (isService) {
+                    // Add service details
+                    if (content.price || content.duration) {
+                        const details = document.createElement('div');
+                        details.className = 'service-details';
+                        details.innerHTML = `
+                            ${content.price ? `<p><strong>Price:</strong> ${content.price}</p>` : ''}
+                            ${content.duration ? `<p><strong>Duration:</strong> ${content.duration}</p>` : ''}
+                        `;
+                        modalDescription.after(details);
+                    }
+                    
+                    // Create new footer
+                    const modalFooter = document.createElement('div');
+                    modalFooter.className = 'modal-footer';
+                    
+                    // Add booking button for bookable services
+                    if (content.bookable) {
+                        const bookBtn = document.createElement('button');
+                        bookBtn.className = 'book-btn';
+                        bookBtn.textContent = 'Book Now';
+                        bookBtn.addEventListener('click', () => {
+                            alert(`Booking ${content.title} service`);
+                        });
+                        modalFooter.appendChild(bookBtn);
+                    } 
+                    // Add contact message for services that require contact
+                    else if (content.contactForBooking) {
+                        const contactMsg = document.createElement('p');
+                        contactMsg.className = 'contact-msg';
+                        contactMsg.innerHTML = `Please <a href="#contact">contact us</a> to schedule ${content.title.toLowerCase()}`;
+                        modalFooter.appendChild(contactMsg);
+                    }
+                    
+                    modalContent.appendChild(modalFooter);
+                }
+                
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        };
+
+        const closeModal = () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        };
+
+        // Service cards - pass true for isService parameter
+        document.querySelectorAll('.service-card .btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const serviceCard = button.closest('.service-card');
+                if (serviceCard) {
+                    const serviceName = serviceCard.querySelector('h3')?.textContent.toLowerCase();
+                    if (serviceName && servicesData[serviceName]) {
+                        showModal(servicesData[serviceName], true);
+                    }
+                }
+            });
+        });
+
+        // Dog care tips - pass false (default) for isService parameter
+        document.querySelectorAll('.view-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dogCard = button.closest('.dog-card');
+                if (dogCard) {
+                    const dogType = dogCard.querySelector('.dog-name')?.textContent.toLowerCase();
+                    if (dogType && tipsData[dogType]) {
+                        showModal(tipsData[dogType]);
+                    } else {
+                        // Fallback for unknown breeds
+                        showModal({
+                            title: dogCard.querySelector('.dog-name').textContent + " Care Tips",
+                            image: dogCard.querySelector('.dog-image').src,
+                            description: "General care information for this breed."
+                        });
+                    }
+                }
+            });
+        });
+
+        // Close button event
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeModal();
+        });
+
+        // Close when clicking outside modal
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+    };
+
+    // Initialize all functionality
+    setupAuthDropdowns();
+    setupSlider();
+    setupModals();
+}); 
