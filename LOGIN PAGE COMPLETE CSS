@@ -1,0 +1,640 @@
+/* Your CSS styles here (unchanged) */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Arial', sans-serif;
+        }
+
+        body {
+          line-height: 1.6;
+          color: #333;
+          background-color: #f9f9f9;
+        }
+
+        header {
+          background: #a8d2a8;
+          color: #333;
+          padding: 1rem 2rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+          display: flex;
+        }
+
+        .logo {
+          color: #2c8a6b;
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-right: 0.5rem;
+        }
+
+        .tagline {
+          color: #4a4a4a;
+          font-size: 0.875rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 50px;
+        }
+        .submit-btn {
+            background-color: #2c8a6b;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #237a5b;
+        }
+        
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+          color: #555;
+          font-size: 0.875rem;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.75rem;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 0.875rem;
+          transition: border 0.3s ease;
+        }
+
+        .submit-button {
+          background-color: #2c8a6b;
+          color: white;
+          border: none;
+          padding: 0.75rem;
+          border-radius: 5px;
+          cursor: pointer;
+          width: 100%;
+          font-size: 0.875rem;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          margin-top: 0.5rem;
+        }
+
+        .submit-button:hover {
+          background-color: #237a5b;
+        }
+
+        .close-btn {
+          position: absolute;
+          top: 0.75rem;
+          right: 0.75rem;
+          background: none;
+          border: none;
+          font-size: 1.25rem;
+          cursor: pointer;
+          color: #888;
+          transition: color 0.3s ease;
+        }
+
+      nav {
+            background: #575656;
+            padding: 0.75rem 1rem;
+        }
+
+        nav ul {
+          display: flex;
+          list-style: none;
+          justify-content: center;
+          flex-wrap: wrap;
+        } 
+
+        nav ul li {
+          margin: 0 5rem;
+        }
+
+        nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          padding: 0.5rem 0;
+          transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+          color: #a8d2a8;
+        }
+
+        .container {
+          padding: 2rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        h2 {
+          margin: 2rem 0 1.5rem;
+          color: #2c8a6b;
+          font-size: 1.75rem;
+          text-align: center;
+        }
+
+        .services {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 1.5rem;
+          padding: 1rem 0;
+        }
+
+        .service-card {
+          border: 1px solid #e0e0e0;
+          padding: 1.25rem;
+          border-radius: 8px;
+          background: white;
+          transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+          transform: translateY(-5px);
+        }
+
+        .service-card img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 5px;
+          margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+          color: #2c8a6b;
+          margin-bottom: 0.5rem;
+        }
+
+        .btn {
+          display: inline-block;
+          background: #2c8a6b;
+          color: white;
+          padding: 0.6rem 1.25rem;
+          text-decoration: none;
+          border-radius: 5px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+          background-color: #237a5b;
+        }
+
+        .slider-container {
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+          margin-bottom: 20px;
+          height: 400px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+          height: 100%;
+        }
+
+        .slide {
+          min-width: 100%;
+          height: 100%;
+          position: relative;
+        }
+
+        .slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .slide-content {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.5);
+          color: white;
+          padding: 15px;
+        }
+
+        .slider-nav {
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 10px;
+        }
+
+        .slider-dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.5);
+          cursor: pointer;
+        }
+
+        .slider-dot.active {
+          background-color: white;
+        }
+
+        .slider-arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white;
+          border: none;
+          padding: 15px;
+          cursor: pointer;
+          font-size: 18px;
+          z-index: 10;
+        }
+
+        .prev {
+          left: 10px;
+        }
+
+        .next {
+          right: 10px;
+        }
+
+        .dog-gallery {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 25px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .dog-card {
+          background-color: white;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease;
+        }
+
+        .dog-card:hover {
+          transform: translateY(-5px);
+        }
+
+        .dog-image {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        .dog-info {
+          padding: 15px;
+        }
+
+        .dog-name {
+          font-size: 1.5rem;
+          margin: 0 0 10px 0;
+          color: #333;
+        }
+
+        .view-btn {
+          display: inline-block;
+          padding: 10px 15px;
+          background-color: #4CAF50;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          font-weight: bold;
+          transition: background-color 0.3s;
+        }
+
+        .view-btn:hover {
+          background-color: #45a049;
+        }
+
+        .other-breeds {
+          margin-top: 10px;
+          color: #666;
+          font-size: 0.9rem;
+        }
+
+        .modal {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.7);
+          z-index: 100;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .modal-content {
+          background-color: white;
+          padding: 20px;
+          border-radius: 10px;
+          max-width: 500px;
+          width: 80%;
+          text-align: center;
+        }
+
+        .modal-footer {
+          margin-top: 20px;
+          padding-top: 20px;
+          border-top: 1px solid #eee;
+          text-align: center;
+        }
+
+        .book-btn {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s;
+        }
+
+        .book-btn:hover {
+          background-color: #45a049;
+        }
+
+        .service-details {
+          margin: 15px 0;
+          padding: 10px;
+          background-color: #f9f9f9;
+          border-radius: 4px;
+        }
+
+        .contact-msg {
+          color: #666;
+          font-style: italic;
+        }
+
+        .contact-msg a {
+          color: #0066cc;
+          text-decoration: none;
+        }
+
+        .contact-msg a:hover {
+          text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @media (max-width: 768px) {
+          header {
+            flex-direction: column;
+            padding: 1rem;
+            text-align: center;
+          }
+          
+          .logo-container {
+            padding-left: 0;
+            margin-bottom: 1rem;
+          }
+          
+          .auth-buttons {
+            padding-right: 0;
+            justify-content: center;
+          }
+          
+          .auth-dropdown {
+            right: 50%;
+            transform: translateX(50%);
+            width: 90%;
+            max-width: 320px;
+          }
+          
+          nav ul {
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          nav ul li {
+            margin: 0.5rem 0;
+          }
+          
+          .services {
+            grid-template-columns: 1fr;
+          }
+          
+          h2 {
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
+          }
+          
+          .slider-container {
+            height: 300px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .logo {
+            font-size: 1.25rem;
+          }
+          
+          .tagline {
+            font-size: 0.75rem;
+          }
+          
+          .auth-button {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.75rem;
+          }
+          
+          .dog-gallery {
+            grid-template-columns: 1fr;
+          }
+          
+          .slider-container {
+            height: 250px;
+          }
+        }
+
+        .branch-hours {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .branch {
+            flex: 1;
+            max-width: 45%;
+        }
+
+        .branch h4 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .user-profile {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .profile-header:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .profile-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            margin-right: 5px;
+        }
+
+        .dropdown-arrow {
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        .profile-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: white;
+            min-width: 250px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+            padding: 15px;
+            animation: fadeIn 0.3s;
+        }
+
+        .profile-dropdown.show {
+            display: block;
+        }
+
+        .profile-info {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .profile-info h4 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .profile-info p {
+            margin: 3px 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .profile-actions {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-btn {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            color: #333;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            text-align: left;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .profile-btn:hover {
+            background-color: #e9ecef;
+        }
+
+        .profile-btn:last-child {
+            margin-bottom: 0;
+        }
+
+        .avatar-upload-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .avatar-preview {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 2px solid #ddd;
+        }
+
+        .avatar-upload-label {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #2c8a6b;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .avatar-upload-label:hover {
+            background-color: #237a5b;
+        }
